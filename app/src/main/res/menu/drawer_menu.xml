@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_item_1"
+            android:title="Jumbled Words" />
+        <item
+            android:id="@+id/nav_item_2"
+            android:title="None" />
+
+    </group>
+</menu>

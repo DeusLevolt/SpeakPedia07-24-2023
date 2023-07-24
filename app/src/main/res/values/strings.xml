@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SpeakPedia</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="s">S</string>
+    <string name="d">D</string>
+    <string name="g">G</string>
+    <string name="h">H</string>
+    <string name="q">Q</string>
+    <string name="w">W</string>
+    <string name="e">E</string>
+    <string name="r">R</string>
+    <string name="t">T</string>
+
+</resources>

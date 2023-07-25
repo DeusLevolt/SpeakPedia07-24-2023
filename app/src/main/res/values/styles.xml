@@ -55,4 +55,117 @@
         <item name="android:textColor">#000000</item>
         <item name="backgroundColor">#FFEB3B</item>
     </style>
+
+    <style name="y">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="u">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="i">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="o">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="p">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="a">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="f">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="j">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="k">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="l">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="z">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="x">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="c">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="v">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="b">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="n">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="m">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <style name="clear">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.25</item>
+        <item name="android:textColor">#000000</item>
+        <item name="backgroundColor">#FFEB3B</item>
+    </style>
+
+
+
 </resources>

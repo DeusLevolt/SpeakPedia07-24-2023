@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundrectangle">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/icon">
+    </ImageView>
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="302dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/start_button">
+    </View>
+
+    <TextView
+        android:id="@+id/start_button"
+        android:layout_width="302dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/start"
+        android:textAppearance="@style/start"
+        android:gravity="center"
+        android:onClick="onStartButtonClick">
+
+    </TextView>
+
+
+</RelativeLayout>

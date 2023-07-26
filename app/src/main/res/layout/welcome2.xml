@@ -4,7 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".welcome2"
-    android:background="@drawable/welcome2">
+    android:background="@drawable/backgroundrectangle">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/icon">
+    </ImageView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:src="@drawable/loading_bar"
+        android:layout_marginTop="600dp">
+    </ImageView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/WelcomeText"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="70dp">
+    </ImageView>
 
 </RelativeLayout>

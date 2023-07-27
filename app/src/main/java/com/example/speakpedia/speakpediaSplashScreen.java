@@ -12,6 +12,7 @@ public class speakpediaSplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.rotate_in, R.anim.rotate_out);
         setContentView(R.layout.welcome_screen);
 
         // Start the countdown timer for the first layout change
@@ -37,6 +38,7 @@ public class speakpediaSplashScreen extends AppCompatActivity {
                     public void onFinish() {
                         // Change the layout after another 5 seconds
                         setContentView(R.layout.activity_speakpedia_splash_screen);
+                        overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
 
                         // Start the countdown timer for launching MainActivity
                         new CountDownTimer(5000, 1000) {
@@ -63,5 +65,6 @@ public class speakpediaSplashScreen extends AppCompatActivity {
         Intent intent = new Intent(speakpediaSplashScreen.this, MainActivity.class);
         startActivity(intent);
         finish(); // Finish the Splash Screen activity
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }

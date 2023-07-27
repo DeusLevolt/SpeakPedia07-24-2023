@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         android:layout_marginTop="150dp"
-        android:src="@drawable/icon">
+        android:src="@drawable/appicon">
     </ImageView>
     <ImageView
         android:layout_width="wrap_content"
@@ -19,12 +19,17 @@
         android:src="@drawable/loading_bar"
         android:layout_marginTop="600dp">
     </ImageView>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/WelcomeText"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="70dp">
-    </ImageView>
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="285dp"
+        android:layout_height="93dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="105dp"
+        android:text="@string/welcome"
+        android:textAppearance="@style/welcome"
+        android:lineSpacingExtra="10sp"
+        android:gravity="center_horizontal|center_vertical"
+        />
 
 </RelativeLayout>

@@ -40,6 +40,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity"/>
+        <activity android:name=".GameActivity"/>
+        <activity android:name=".MainGame"/>
     </application>
 
 </manifest>

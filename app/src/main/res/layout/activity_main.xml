@@ -11,8 +11,26 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="430dp"
+            android:background="@drawable/keyboard_bg"
+            android:elevation="4dp"
+            android:translationY="20dp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <TextView
             android:id="@+id/q"
@@ -528,6 +546,7 @@
     <!-- Add content for the drawer here -->
     <!-- This is the content that will appear when the drawer is opened -->
         <Button
+            android:background="@drawable/purplebutton"
             android:id="@+id/game_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -535,6 +554,7 @@
             android:textAppearance="@style/game"/>
 
         <Button
+            android:background="@drawable/graybutton"
             android:id="@+id/about_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

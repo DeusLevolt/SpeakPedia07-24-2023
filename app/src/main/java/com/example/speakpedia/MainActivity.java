@@ -1,7 +1,6 @@
 package com.example.speakpedia;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -10,19 +9,13 @@ import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.view.Gravity;
-import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -40,7 +33,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import com.google.android.material.navigation.NavigationView;
+import android.media.MediaPlayer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_PERMISSION_CODE = 1;
     private static final int SPEECH_REQUEST_CODE = 2;
     private DrawerLayout drawerLayout;
+    private MediaPlayer mediaPlayer;
 
     public MainActivity() {
     }
@@ -66,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupRetrofit();
         drawerLayout = findViewById(R.id.drawer_layout);
+        mediaPlayer = MediaPlayer.create(this, R.raw.click_pebbles);
 
         //reference to all buttons
         Button aboutus = findViewById(R.id.about_us);
@@ -125,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         burgerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 if (drawerLayout.isDrawerOpen(Gravity.RIGHT)) {
                     drawerLayout.closeDrawer(Gravity.RIGHT);
                 } else {
@@ -136,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
         q.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"Q");
             }
@@ -144,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
         w.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"W");
             }
@@ -152,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
         e.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"E");
             }
@@ -160,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
         r.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"R");
             }
@@ -168,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
         t.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"T");
             }
@@ -176,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
         y.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"Y");
             }
@@ -184,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
         u.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"U");
             }
@@ -192,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
         i.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"I");
             }
@@ -200,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
         o.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"O");
             }
@@ -208,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
         p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"P");
             }
@@ -216,6 +222,7 @@ public class MainActivity extends AppCompatActivity {
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"A");
             }
@@ -224,6 +231,7 @@ public class MainActivity extends AppCompatActivity {
         s.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"S");
             }
@@ -232,6 +240,7 @@ public class MainActivity extends AppCompatActivity {
         d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"D");
             }
@@ -240,6 +249,7 @@ public class MainActivity extends AppCompatActivity {
         f.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"F");
             }
@@ -248,6 +258,7 @@ public class MainActivity extends AppCompatActivity {
         g.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"G");
             }
@@ -256,6 +267,7 @@ public class MainActivity extends AppCompatActivity {
         h.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"H");
             }
@@ -264,6 +276,7 @@ public class MainActivity extends AppCompatActivity {
         j.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"J");
             }
@@ -272,6 +285,7 @@ public class MainActivity extends AppCompatActivity {
         k.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"K");
             }
@@ -280,6 +294,7 @@ public class MainActivity extends AppCompatActivity {
         l.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"L");
             }
@@ -288,6 +303,7 @@ public class MainActivity extends AppCompatActivity {
         z.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"Z");
             }
@@ -296,6 +312,7 @@ public class MainActivity extends AppCompatActivity {
         x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"X");
             }
@@ -304,6 +321,7 @@ public class MainActivity extends AppCompatActivity {
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"C");
             }
@@ -312,6 +330,7 @@ public class MainActivity extends AppCompatActivity {
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"V");
             }
@@ -320,6 +339,7 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"B");
             }
@@ -328,6 +348,7 @@ public class MainActivity extends AppCompatActivity {
         n.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"N");
             }
@@ -336,6 +357,7 @@ public class MainActivity extends AppCompatActivity {
         m.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+"M");
             }
@@ -344,6 +366,7 @@ public class MainActivity extends AppCompatActivity {
         space.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 displayText.setText(currentText+" ");
             }
@@ -352,6 +375,7 @@ public class MainActivity extends AppCompatActivity {
         imageButtondel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 String currentText = displayText.getText().toString();
                 //check if  the text is not empty
                 if (!currentText.isEmpty()) {
@@ -364,6 +388,7 @@ public class MainActivity extends AppCompatActivity {
         imageButtonclearall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playSound();
                 displayText.setText("");
                 textView.setText("");
             }
@@ -405,6 +430,18 @@ public class MainActivity extends AppCompatActivity {
         });
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
     }
+
+    private void playSound() {
+        // Check if MediaPlayer is playing, stop and reset it
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+        }
+
+        // Start playing the sound
+        mediaPlayer.start();
+    }
+
 
     private void checkPermissionAndStartSpeechToText() {
         //check if the record audio permission is okay
@@ -461,6 +498,7 @@ public class MainActivity extends AppCompatActivity {
         if (speechRecognizer != null) {
             speechRecognizer.destroy();
         }
+        mediaPlayer.release();
     }
 
 

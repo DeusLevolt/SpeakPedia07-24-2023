@@ -24,6 +24,19 @@
             android:translationY="20dp"
             />
 
+        <TextView
+            android:id="@+id/imageButtonclearall"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="258dp"
+            android:layout_marginTop="642dp"
+            android:background="@drawable/round_edges_orange"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="36sp"
+            android:text="@string/clear"
+            android:textAppearance="@style/clear" />
+
     </RelativeLayout>
 
 
@@ -40,12 +53,12 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="470dp"
-            android:background="@color/lightblue"
+            android:background="@drawable/round_edges"
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="10sp"
             android:text="@string/q"
             android:textAppearance="@style/q"
-            android:clickable="true"/>
+            android:clickable="true" />
 
         <TextView
             android:id="@+id/w"
@@ -55,7 +68,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="58dp"
             android:layout_marginTop="470dp"
-            android:background="@color/lightGreen"
+            android:background="@drawable/round_edges_green"
             android:clickable="true"
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="10sp"
@@ -74,7 +87,7 @@
             android:lineSpacingExtra="10sp"
             android:text="@string/s"
             android:textAppearance="@style/s"
-            android:background="@color/lightGreen"
+            android:background="@drawable/round_edges_green"
             android:clickable="true"/>
 
         <TextView
@@ -89,7 +102,7 @@
             android:lineSpacingExtra="10sp"
             android:text="@string/d"
             android:textAppearance="@style/d"
-            android:background="@color/orange"
+            android:background="@drawable/round_edges_orange"
             android:clickable="true"/>
 
         <TextView
@@ -104,7 +117,7 @@
             android:lineSpacingExtra="10sp"
             android:text="@string/g"
             android:textAppearance="@style/g"
-            android:background="@color/Yellow"
+            android:background="@drawable/round_edges_yellow"
             android:clickable="true"/>
 
         <TextView
@@ -119,7 +132,7 @@
             android:lineSpacingExtra="10sp"
             android:text="@string/h"
             android:textAppearance="@style/h"
-            android:background="@color/Yellow"
+            android:background="@drawable/round_edges_yellow"
             android:clickable="true"/>
 
         <TextView
@@ -134,7 +147,7 @@
             android:lineSpacingExtra="10sp"
             android:text="@string/e"
             android:textAppearance="@style/e"
-            android:background="@color/orange"
+            android:background="@drawable/round_edges_orange"
             android:clickable="true"/>
 
         <TextView
@@ -149,7 +162,7 @@
             android:lineSpacingExtra="10sp"
             android:text="@string/r"
             android:textAppearance="@style/r"
-            android:background="@color/Yellow"
+            android:background="@drawable/round_edges_yellow"
             android:clickable="true"/>
 
         <TextView
@@ -164,7 +177,7 @@
             android:lineSpacingExtra="10sp"
             android:text="@string/t"
             android:textAppearance="@style/t"
-            android:background="@color/Yellow"
+            android:background="@drawable/round_edges_yellow"
             android:clickable="true"/>
 
         <TextView
@@ -179,7 +192,7 @@
             android:textAppearance="@style/y"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/Yellow"
+            android:background="@drawable/round_edges_yellow"
             android:clickable="true"/>
 
         <TextView
@@ -194,7 +207,7 @@
             android:textAppearance="@style/u"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/Yellow"
+            android:background="@drawable/round_edges_yellow"
             android:clickable="true"/>
 
         <TextView
@@ -209,7 +222,7 @@
             android:textAppearance="@style/i"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/orange"
+            android:background="@drawable/round_edges_orange"
             android:clickable="true"/>
 
         <TextView
@@ -224,7 +237,7 @@
             android:textAppearance="@style/o"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/lightGreen"
+            android:background="@drawable/round_edges_green"
             android:clickable="true"/>
 
         <TextView
@@ -239,7 +252,7 @@
             android:textAppearance="@style/p"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/lightblue"
+            android:background="@drawable/round_edges"
             android:clickable="true"/>
 
         <TextView
@@ -254,7 +267,7 @@
             android:textAppearance="@style/a"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/lightblue"
+            android:background="@drawable/round_edges"
             android:clickable="true"/>
 
         <TextView
@@ -269,7 +282,7 @@
             android:textAppearance="@style/f"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/Yellow"
+            android:background="@drawable/round_edges_yellow"
             android:clickable="true"/>
 
         <TextView
@@ -284,7 +297,7 @@
             android:textAppearance="@style/j"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/orange"
+            android:background="@drawable/round_edges_orange"
             android:clickable="true"/>
 
         <TextView
@@ -299,7 +312,7 @@
             android:textAppearance="@style/k"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/lightGreen"
+            android:background="@drawable/round_edges_green"
             android:clickable="true"/>
 
         <TextView
@@ -314,7 +327,7 @@
             android:textAppearance="@style/l"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/lightblue"
+            android:background="@drawable/round_edges"
             android:clickable="true"/>
 
         <TextView
@@ -329,7 +342,7 @@
             android:textAppearance="@style/z"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/lightblue"
+            android:background="@drawable/round_edges"
             android:clickable="true"/>
 
         <TextView
@@ -344,7 +357,7 @@
             android:textAppearance="@style/x"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/lightGreen"
+            android:background="@drawable/round_edges_green"
             android:clickable="true"/>
 
         <TextView
@@ -359,7 +372,7 @@
             android:textAppearance="@style/c"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/orange"
+            android:background="@drawable/round_edges_orange"
             android:clickable="true"/>
 
         <TextView
@@ -374,7 +387,7 @@
             android:textAppearance="@style/v"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/Yellow"
+            android:background="@drawable/round_edges_yellow"
             android:clickable="true"/>
 
         <TextView
@@ -389,7 +402,7 @@
             android:textAppearance="@style/b"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/orange"
+            android:background="@drawable/round_edges_orange"
             android:clickable="true"/>
 
         <TextView
@@ -404,7 +417,7 @@
             android:textAppearance="@style/n"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/lightGreen"
+            android:background="@drawable/round_edges_green"
             android:clickable="true"/>
 
         <TextView
@@ -419,7 +432,7 @@
             android:textAppearance="@style/m"
             android:lineSpacingExtra="10sp"
             android:gravity="center_horizontal|center_vertical"
-            android:background="@color/lightblue"
+            android:background="@drawable/round_edges"
             android:clickable="true"/>
 
         <View
@@ -475,19 +488,6 @@
             android:layout_height="80dp"
             android:background="@drawable/appicon" />
 
-
-        <TextView
-            android:id="@+id/imageButtonclearall"
-            android:layout_width="45dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="258dp"
-            android:layout_marginTop="642dp"
-            android:background="@color/orange"
-            android:clickable="true"
-            android:gravity="center_vertical"
-            android:text="@string/clear"
-            android:lineSpacingExtra="36sp"
-            android:textAppearance="@style/clear" />
 
         <ImageView
             android:id="@+id/imageButtonspeech"

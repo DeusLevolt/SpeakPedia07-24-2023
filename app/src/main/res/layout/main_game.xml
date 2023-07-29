@@ -4,23 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".MainGame"
     android:background="@drawable/backgroundrectangle">
 
     <TextView
         android:id="@+id/jumbledWordTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="24sp"
-        android:text="Jumbled Word Placeholder" />
+        android:layout_width="252dp"
+        android:layout_height="114dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/frame_26"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/answerEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/frame_26"
+        android:layout_width="313dp"
+        android:layout_height="83dp"
         android:layout_below="@id/jumbledWordTextView"
-        android:layout_margin="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
         android:hint="Your Answer"
         android:inputType="text"
         android:textSize="16sp" />
@@ -31,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/answerEditText"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
-        android:text="Submit" />
+        android:layout_marginTop="16dp"
+        android:text="Enter" />
 
 </RelativeLayout>

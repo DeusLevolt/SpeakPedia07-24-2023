@@ -1,5 +1,6 @@
 package com.example.speakpedia;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +34,15 @@ public class MainGame extends AppCompatActivity {
         jumbledWordTextView = findViewById(R.id.jumbledWordTextView);
         answerEditText = findViewById(R.id.answerEditText);
         submitButton = findViewById(R.id.submitButton);
+        Button backButton = findViewById(R.id.back_button);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainGame.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override

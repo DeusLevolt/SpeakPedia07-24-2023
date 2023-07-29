@@ -17,4 +17,5 @@
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
     <color name="pink">#F82DC5</color>
+    <color name="red">#FF3636</color>
 </resources>

@@ -26,10 +26,10 @@
         android:layout_below="@id/jumbledWordTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:textColor="@android:color/black"
         android:textAlignment="center"
         android:hint="Your Answer"
         android:inputType="text"
+        android:textColor="@android:color/black"
         android:textSize="16sp" />
 
     <Button
@@ -40,5 +40,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="Enter" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/red"
+        android:text="Back"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"/>
 
 </RelativeLayout>

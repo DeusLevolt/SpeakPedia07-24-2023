@@ -12,8 +12,8 @@ public class speakpediaSplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        overridePendingTransition(R.anim.rotate_in, R.anim.rotate_out);
         setContentView(R.layout.welcome_screen);
+        overridePendingTransition(R.anim.rotate_in, R.anim.rotate_out);
 
         // Start the countdown timer for the first layout change
         new CountDownTimer(5000, 1000) {

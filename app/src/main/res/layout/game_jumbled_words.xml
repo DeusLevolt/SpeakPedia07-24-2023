@@ -52,8 +52,6 @@
         android:textStyle="bold"
         android:textAppearance="@style/start"
         android:gravity="center"
-        android:clickable="true">
-
-    </TextView>
+        android:clickable="true" />
 
 </RelativeLayout>

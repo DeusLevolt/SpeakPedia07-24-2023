@@ -33,33 +33,85 @@
         android:textAlignment="center"
         android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/answerEditText"
-        android:background="@drawable/frame_26"
-        android:layout_width="313dp"
-        android:layout_height="83dp"
-        android:layout_below="@id/jumbledWordTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:textAlignment="center"
-        android:hint="Your Answer"
-        android:inputType="text"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/submitButton"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/very_light_blue"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/submitButton"
+            android:layout_toRightOf="@id/button1"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/very_light_blue"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/submitButton"
+            android:layout_toRightOf="@id/button2"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/very_light_blue"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/submitButton"
+            android:layout_toRightOf="@id/button3"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/very_light_blue"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/submitButton"
+            android:layout_toRightOf="@id/button4"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/very_light_blue"
+            android:textSize="24sp" />
+
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/answerEditText"
+        android:layout_below="@id/jumbledWordTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="Enter" />
+    
 
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="75dp"
         android:layout_height="50dp"
         android:background="@drawable/back_button"/>
+
+    <ImageButton
+        android:id="@+id/imageButtondel"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/backspace"
+        android:contentDescription="DEL"
+        />
 
 </RelativeLayout>

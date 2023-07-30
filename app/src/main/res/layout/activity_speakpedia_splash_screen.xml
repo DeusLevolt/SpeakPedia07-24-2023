@@ -9,8 +9,8 @@
 
     <View
         android:id="@+id/s_removebg_"
-        android:layout_width="467dp"
-        android:layout_height="447dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:background="@drawable/appicon"
         />
 

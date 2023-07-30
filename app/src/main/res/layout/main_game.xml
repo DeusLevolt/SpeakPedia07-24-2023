@@ -3,16 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainGame"
     android:background="@drawable/backgroundrectangle">
 
     <TextView
+        android:id="@+id/hintTextView"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:scrollbars="vertical"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:background="@drawable/frame_26"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:fontFamily="serif" />
+
+    <TextView
         android:id="@+id/jumbledWordTextView"
         android:layout_width="252dp"
-        android:layout_height="114dp"
+        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/frame_26"
         android:textColor="@color/black"
         android:textAlignment="center"
@@ -41,13 +56,10 @@
         android:layout_marginTop="16dp"
         android:text="Enter" />
 
-    <Button
+    <ImageButton
         android:id="@+id/back_button"
         android:layout_width="75dp"
         android:layout_height="50dp"
-        android:backgroundTint="@color/red"
-        android:text="Back"
-        android:textColor="@color/black"
-        android:textStyle="bold|italic"/>
+        android:background="@drawable/back_button"/>
 
 </RelativeLayout>

@@ -14,6 +14,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/SpeakPedia"
+            android:textAppearance="@style/speakpedia"
+            android:textAlignment="center" />
+
         <View
             android:layout_width="320dp"
             android:layout_height="250dp"
@@ -36,6 +45,19 @@
             android:lineSpacingExtra="36sp"
             android:text="@string/clear"
             android:textAppearance="@style/clear" />
+
+        <TextView
+            android:id="@+id/d"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="102dp"
+            android:layout_marginTop="529dp"
+            android:background="@drawable/round_edges_orange"
+            android:clickable="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/d"
+            android:textAppearance="@style/d" />
 
     </RelativeLayout>
 
@@ -88,21 +110,6 @@
             android:text="@string/s"
             android:textAppearance="@style/s"
             android:background="@drawable/round_edges_green"
-            android:clickable="true"/>
-
-        <TextView
-            android:id="@+id/d"
-            android:layout_width="25dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="102dp"
-            android:layout_marginTop="530dp"
-            android:gravity="center_horizontal|center_vertical"
-            android:lineSpacingExtra="10sp"
-            android:text="@string/d"
-            android:textAppearance="@style/d"
-            android:background="@drawable/round_edges_orange"
             android:clickable="true"/>
 
         <TextView
@@ -472,16 +479,17 @@
             />
 
 
-        <Button
+        <ImageButton
             android:id="@+id/imageButtonspeak"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginLeft="220dp"
             android:layout_marginTop="125dp"
             android:layout_marginBottom="-50dp"
-            android:background="@drawable/volume"
+            android:background="@drawable/new_speak_volume"
             android:padding="10dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:contentDescription="speak" />
 
         <ImageView
             android:layout_width="80dp"
@@ -495,7 +503,7 @@
             android:layout_height="35dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="125dp"
-            android:background="@drawable/baseline_mic_24"
+            android:background="@drawable/new_mic"
             android:clickable="true"
             android:focusable="true" />
 

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         Button aboutus = findViewById(R.id.about_us);
         Button game = findViewById(R.id.game_button);
         ImageButton imageButtondel = findViewById(R.id.imageButtondel);
-        Button imageButtonspeak = findViewById(R.id.imageButtonspeak);
+        ImageButton imageButtonspeak = findViewById(R.id.imageButtonspeak);
         TextView imageButtonclearall = findViewById(R.id.imageButtonclearall);
         ImageView imageButtonspeech = findViewById(R.id.imageButtonspeech);
         TextView q = findViewById(R.id.q);

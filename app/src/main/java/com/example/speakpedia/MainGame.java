@@ -6,12 +6,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class MainGame extends AppCompatActivity {
@@ -19,12 +22,13 @@ public class MainGame extends AppCompatActivity {
     private static final String KEY_CORRECT_WORD = "correct_word";
 
     private TextView jumbledWordTextView;
+    private TextView hintTextView;
     private EditText answerEditText;
-    private Button submitButton;
 
     private String correctWord;
 
-    private static final String[] words = {"apple", "banana", "orange", "grape", "mango"};
+    private static final String[] words = {"smell", "crowd", "gift", "vote", "running", "know", "neat", "book", "flower", "hill"};
+    private Map<String, String> wordHintMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +37,10 @@ public class MainGame extends AppCompatActivity {
 
         jumbledWordTextView = findViewById(R.id.jumbledWordTextView);
         answerEditText = findViewById(R.id.answerEditText);
-        submitButton = findViewById(R.id.submitButton);
-        Button backButton = findViewById(R.id.back_button);
+        Button submitButton = findViewById(R.id.submitButton);
+        ImageButton backButton = findViewById(R.id.back_button);
+        hintTextView = findViewById(R.id.hintTextView);
+        initializeWordHintMap();
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +68,11 @@ public class MainGame extends AppCompatActivity {
         correctWord = getJumbledWord();
         jumbledWordTextView.setText(correctWord);
         answerEditText.setText("");
+
+        // Update the hint text based on the current jumbled word
+        String hint = wordHintMap.get(getOriginalWord(correctWord));
+        Log.d("HintDebug", "Current Word: " + correctWord + ", Hint: " + hint);
+        hintTextView.setText(hint);
     }
 
     private void verifyAnswer() {
@@ -79,7 +90,7 @@ public class MainGame extends AppCompatActivity {
         }
     }
 
-    private String unJumbleWord(String jumbledWord) {
+    private String  unJumbleWord(String jumbledWord) {
         for (String word : words) {
             if (jumbledWord.equalsIgnoreCase(jumbleWord(word))) {
                 return word;
@@ -114,6 +125,21 @@ public class MainGame extends AppCompatActivity {
             chars[i] = temp;
         }
         return new String(chars);
+    }
+
+    private void initializeWordHintMap() {
+        wordHintMap = new HashMap<>();
+        // Add word-hint pairs to the map
+        wordHintMap.put("smell", "A human human sensory to pick up scent.");
+        wordHintMap.put("crowd", " A large number of people gathered together in a disorganized or unruly way.");
+        wordHintMap.put("gift", "Thing given willingly to someone without payment.");
+        wordHintMap.put("vote", "A formal indication of a choice between two or more candidates.");
+        wordHintMap.put("running", "The action or movement of a runner.");
+        wordHintMap.put("know", "Aware of through observation, inquiry, or information.");
+        wordHintMap.put("neat", "A place or thing that arranged in an orderly, tidy way.");
+        wordHintMap.put("book", "Written or printed work consist of pages.");
+        wordHintMap.put("flower", " A seed-bearing part of a plant, consisting of reproductive organs.");
+        wordHintMap.put("hill", "Naturally raised area of land, not as high or craggy as a mountain.");
     }
 
     @Override

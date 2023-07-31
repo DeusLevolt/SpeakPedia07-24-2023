@@ -13,9 +13,6 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
-
-
         <View
             android:layout_width="320dp"
             android:layout_height="250dp"
@@ -25,16 +22,12 @@
             android:elevation="4dp"
             android:translationY="20dp"
             />
-
-
-
     </RelativeLayout>
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <TextView
             android:id="@+id/imageButtonclearall"
             android:layout_width="45dp"
@@ -48,7 +41,6 @@
             android:text="@string/clear"
             android:textAppearance="@style/clear"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/d"
             android:layout_width="25dp"
@@ -62,9 +54,6 @@
             android:text="@string/d"
             android:textAppearance="@style/d"
             android:focusable="true" />
-
-
-
         <TextView
             android:id="@+id/q"
             android:layout_width="25dp"
@@ -80,7 +69,6 @@
             android:textAppearance="@style/q"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/w"
             android:layout_width="25dp"
@@ -96,7 +84,6 @@
             android:text="@string/w"
             android:textAppearance="@style/w"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/s"
             android:layout_width="25dp"
@@ -112,7 +99,6 @@
             android:background="@drawable/round_edges_green"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/g"
             android:layout_width="25dp"
@@ -128,7 +114,6 @@
             android:background="@drawable/round_edges_yellow"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/h"
             android:layout_width="25dp"
@@ -144,7 +129,6 @@
             android:background="@drawable/round_edges_yellow"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/e"
             android:layout_width="25dp"
@@ -160,7 +144,6 @@
             android:background="@drawable/round_edges_orange"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/r"
             android:layout_width="25dp"
@@ -176,7 +159,6 @@
             android:background="@drawable/round_edges_yellow"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/t"
             android:layout_width="25dp"
@@ -192,7 +174,6 @@
             android:background="@drawable/round_edges_yellow"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/y"
             android:layout_width="25dp"
@@ -208,7 +189,6 @@
             android:background="@drawable/round_edges_yellow"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/u"
             android:layout_width="25dp"
@@ -224,7 +204,6 @@
             android:background="@drawable/round_edges_yellow"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/i"
             android:layout_width="25dp"
@@ -240,7 +219,6 @@
             android:background="@drawable/round_edges_orange"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/o"
             android:layout_width="25dp"
@@ -256,7 +234,6 @@
             android:background="@drawable/round_edges_green"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/p"
             android:layout_width="25dp"
@@ -272,7 +249,6 @@
             android:background="@drawable/round_edges"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/a"
             android:layout_width="25dp"
@@ -288,7 +264,6 @@
             android:background="@drawable/round_edges"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/f"
             android:layout_width="25dp"
@@ -304,7 +279,6 @@
             android:background="@drawable/round_edges_yellow"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/j"
             android:layout_width="25dp"
@@ -320,7 +294,6 @@
             android:background="@drawable/round_edges_orange"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/k"
             android:layout_width="25dp"
@@ -336,7 +309,6 @@
             android:background="@drawable/round_edges_green"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/l"
             android:layout_width="25dp"
@@ -352,7 +324,6 @@
             android:background="@drawable/round_edges"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/z"
             android:layout_width="25dp"
@@ -368,7 +339,6 @@
             android:background="@drawable/round_edges"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/x"
             android:layout_width="25dp"
@@ -384,7 +354,6 @@
             android:background="@drawable/round_edges_green"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/c"
             android:layout_width="25dp"
@@ -400,7 +369,6 @@
             android:background="@drawable/round_edges_orange"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/v"
             android:layout_width="25dp"
@@ -416,7 +384,6 @@
             android:background="@drawable/round_edges_yellow"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/b"
             android:layout_width="25dp"
@@ -432,7 +399,6 @@
             android:background="@drawable/round_edges_orange"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/n"
             android:layout_width="25dp"
@@ -448,7 +414,6 @@
             android:background="@drawable/round_edges_green"
             android:clickable="true"
             android:focusable="true" />
-
         <TextView
             android:id="@+id/m"
             android:layout_width="25dp"
@@ -464,7 +429,6 @@
             android:background="@drawable/round_edges"
             android:clickable="true"
             android:focusable="true" />
-
         <View
             android:id="@+id/space_button"
             android:layout_width="148dp"
@@ -473,9 +437,7 @@
             android:layout_marginStart="100dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="642dp"
-            android:background="@drawable/rectangle_5"
-            />
-        
+            android:background="@drawable/rectangle_5"/>
         <TextView
             android:id="@+id/display_text"
             android:layout_width="300dp"
@@ -490,7 +452,6 @@
             android:textStyle="bold"
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="145dp" />
-
         <ImageButton
             android:id="@+id/imageButtondel"
             android:layout_width="35dp"
@@ -498,10 +459,7 @@
             android:layout_marginStart="290dp"
             android:layout_marginTop="587dp"
             android:background="@drawable/backspace"
-            android:contentDescription="@string/del"
-            />
-
-
+            android:contentDescription="@string/del"/>
         <ImageButton
             android:id="@+id/imageButtonspeak"
             android:layout_width="35dp"
@@ -513,14 +471,11 @@
             android:padding="10dp"
             android:textAlignment="center"
             android:contentDescription="@string/speak" />
-
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_marginTop="-15dp"
             android:background="@drawable/appicon" />
-
-
         <ImageView
             android:id="@+id/imageButtonspeech"
             android:layout_width="35dp"
@@ -530,7 +485,6 @@
             android:background="@drawable/new_mic"
             android:clickable="true"
             android:focusable="true" />
-
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="300dp"
@@ -539,12 +493,10 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="200dp"
             android:background="@drawable/frame_26">
-
             <LinearLayout
                 android:layout_width="352dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="300dp"
@@ -560,7 +512,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <ImageButton
             android:id="@+id/burger"
             android:layout_width="40dp"
@@ -571,13 +522,13 @@
             android:clipToOutline="true"
             android:focusable="true" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:orientation="vertical"
         android:background="#80808080">
-
     <!-- Add content for the drawer here -->
     <!-- This is the content that will appear when the drawer is opened -->
         <Button
@@ -589,7 +540,11 @@
             android:backgroundTint="@color/magenta"
             android:text="@string/game"
             android:textAppearance="@style/game"
-            android:contentDescription="@string/game" />
+            android:contentDescription="@string/game"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
 
         <Button
             android:id="@+id/about_us"
@@ -598,7 +553,19 @@
             android:backgroundTint="@color/lightblue"
             android:text="@string/about_us"
             android:textAppearance="@style/about_us"
-            android:contentDescription="@string/about_us" />
+            android:contentDescription="@string/about_us"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <ImageButton
+            android:id="@+id/exit_button_main"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="390dp"
+            android:layout_marginLeft="165dp"
+            android:background="@drawable/exit"/>
 </LinearLayout>
     
 

@@ -5,6 +5,13 @@
     android:id="@+id/About"
     android:background="@drawable/backgroundrectangle">
 
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/back_button"/>
+
     <TextView
         android:layout_width="300dp"
         android:layout_height="61dp"
@@ -14,7 +21,7 @@
         android:textAppearance="@style/about_us"
         android:textColor="@color/black"
         android:gravity="center"
-        android:background="@color/pink"/>
+        android:background="@drawable/about_us_rounded_edges"/>
 
     <ScrollView
         android:layout_width="320dp"

@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this, R.raw.click_pebbles);
 
         //reference to all buttons
+        ImageButton exitButton = findViewById(R.id.exit_button_main);
         Button aboutus = findViewById(R.id.about_us);
         Button game = findViewById(R.id.game_button);
         ImageButton imageButtondel = findViewById(R.id.imageButtondel);
@@ -101,6 +102,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         //set onclick listener for each buttons
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showExitConfirmationDialog();
+            }
+        });
 
         game.setOnClickListener(new View.OnClickListener() {
             @Override

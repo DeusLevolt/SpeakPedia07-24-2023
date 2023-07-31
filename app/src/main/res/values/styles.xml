@@ -171,12 +171,14 @@
         <item name="android:textSize">32sp</item>
         <item name="android:letterSpacing">0.1</item>
         <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/baloo</item>
     </style>
 
     <style name="about_us">
         <item name="android:textSize">32sp</item>
         <item name="android:letterSpacing">0.1</item>
         <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/baloo</item>
     </style>
 
     <style name="about_speak">
@@ -204,6 +206,7 @@
         <item name="android:textSize">40sp</item>
         <item name="android:letterSpacing">0.1</item>
         <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">@font/freeserif</item>
     </style>
 
     <style name="welcome">
@@ -225,6 +228,14 @@
         <item name="android:fontFamily">@font/freeserif</item>
         <item name="android:letterSpacing">0.25</item>
     </style>
+
+    <style name="good_job">
+        <item name="android:textSize">64sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">@font/freeserif</item>
+    </style>
+
 
 
 </resources>

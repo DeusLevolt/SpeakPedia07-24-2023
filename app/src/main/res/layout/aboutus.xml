@@ -20,8 +20,10 @@
         android:layout_width="320dp"
         android:layout_height="500dp"
         android:layout_marginTop="200dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:scrollbars="vertical"
+        android:scrollbarTrackVertical="@color/white"
+        android:scrollbarThumbVertical="@color/black"
         android:background="@drawable/aboutus">
         
         <LinearLayout
@@ -32,11 +34,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="10dp"
                 android:text="@string/about_speak"
-                android:textAppearance="@style/about_speak"
                 android:textAlignment="center"
-                android:lineSpacingExtra="10dp">
-            </TextView>
+                android:textAppearance="@style/about_speak" />
         </LinearLayout>
 
     </ScrollView>

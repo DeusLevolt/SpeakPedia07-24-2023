@@ -16,12 +16,11 @@
         android:scrollbars="vertical"
         android:maxLines="3"
         android:ellipsize="end"
-        android:background="@drawable/frame_26"
         android:textColor="@color/black"
         android:textStyle="bold|italic"
         android:textSize="20sp"
         android:textAlignment="center"
-        android:fontFamily="serif" />
+        android:fontFamily="@font/archivo_black" />
 
     <TextView
         android:id="@+id/jumbledWordTextView"
@@ -128,6 +127,7 @@
         android:background="@drawable/game_delete_button"
         android:contentDescription="@string/del"
         />
+
     <ImageButton
         android:id="@+id/shuffle_button"
         android:layout_width="35dp"

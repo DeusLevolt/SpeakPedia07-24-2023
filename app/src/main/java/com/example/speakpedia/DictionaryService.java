@@ -8,6 +8,6 @@ import retrofit2.http.Query;
 
 public interface DictionaryService {
 
-    @GET("api/v3/references/sd3/json/{word}")
+    @GET("api/v3/references/collegiate/json/{word}")
     Call<WordResponse[]> getWordDefinition(@Path("word") String word, @Query("key") String apiKey);
 }

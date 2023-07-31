@@ -535,6 +535,7 @@
             android:id="@+id/scrollView"
             android:layout_width="300dp"
             android:layout_height="200dp"
+            android:scrollbars="vertical"
             android:layout_marginStart="30dp"
             android:layout_marginTop="200dp"
             android:background="@drawable/frame_26">
@@ -546,9 +547,10 @@
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="match_parent"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
+                    android:ellipsize="end"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -574,26 +576,29 @@
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:orientation="vertical"
-        android:background="#AA000000">
-
+        android:background="#80808080">
 
     <!-- Add content for the drawer here -->
     <!-- This is the content that will appear when the drawer is opened -->
-        <ImageButton
-            android:background="@drawable/purplebutton"
+        <Button
             android:id="@+id/game_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"
+            android:backgroundTint="@color/magenta"
             android:text="@string/game"
-            android:textAppearance="@style/game"/>
+            android:textAppearance="@style/game"
+            android:contentDescription="@string/game" />
 
-        <ImageButton
-            android:background="@drawable/graybutton"
+        <Button
             android:id="@+id/about_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightblue"
             android:text="@string/about_us"
-            android:textAppearance="@style/about_us"/>
+            android:textAppearance="@style/about_us"
+            android:contentDescription="@string/about_us" />
 </LinearLayout>
     
 

@@ -12,7 +12,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -28,12 +30,15 @@ public class MainGame extends AppCompatActivity {
     private static final String[] words = {"smell", "crowd", "gifts", "light", "water", "music", "paint", "book", "phone", "games"};
     private Map<String, String> wordHintMap;
     private Button[] letterButtons;
+    private List<String> shownWords;
+    private int currentWordIndex = 0; // To keep track of the current word index
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_game);
 
+        shownWords = new ArrayList<>();
         jumbledWordTextView = findViewById(R.id.jumbledWordTextView);
         Button submitButton = findViewById(R.id.submitButton);
         ImageButton backButton = findViewById(R.id.back_button);
@@ -46,6 +51,7 @@ public class MainGame extends AppCompatActivity {
         letterButtons[3] = findViewById(R.id.button4);
         letterButtons[4] = findViewById(R.id.button5);
         ImageButton deleteButton = findViewById(R.id.imageButtondel);
+        ImageButton shuffleButton = findViewById(R.id.shuffle_button);
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,11 +79,53 @@ public class MainGame extends AppCompatActivity {
         } else {
             startGame(); // Initialize a new game if no saved instance state.
         }
+
+        shuffleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reshuffleGame();
+            }
+        });
+
+        if (savedInstanceState != null) {
+            correctWord = savedInstanceState.getString(KEY_CORRECT_WORD);
+        } else {
+            startGame(); // Initialize a new game if no saved instance state.
+        }
     }
 
     private void startGame() {
         correctWord = getJumbledWord();
         jumbledWordTextView.setText(""); // Clear the TextView initially
+
+        // Check if all words have been shown once
+        if (shownWords != null && shownWords.size() == words.length) {
+            // If all words have been shown once, reset the list
+            shownWords = new ArrayList<>();
+        }
+
+        // Get the current word from the words array
+        String word = words[currentWordIndex];
+
+        // If the word has already been shown in this session, get the next word
+        while (shownWords.contains(word)) {
+            currentWordIndex = (currentWordIndex + 1) % words.length;
+            word = words[currentWordIndex];
+        }
+        // Add the selected word to the list of shown words
+        shownWords.add(word);
+        // Set the current word index for the next iteration
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+        // Set a fixed width for the buttons to prevent them from moving when hidden
+        int buttonWidth = getResources().getDimensionPixelSize(R.dimen.button_fixed_width);
+        for (Button button : letterButtons) {
+            button.getLayoutParams().width = buttonWidth;
+            button.requestLayout(); // Refresh the layout after setting the width
+        }
+        //set all letter buttons to visible
+        for (Button button : letterButtons) {
+            button.setVisibility(View.VISIBLE);
+        }
 
         // Update the hint text based on the current jumbled word
         String hint = wordHintMap.get(getOriginalWord(correctWord));
@@ -99,9 +147,33 @@ public class MainGame extends AppCompatActivity {
                         String buttonText = button.getText().toString();
                         String currentText = jumbledWordTextView.getText().toString();
                         jumbledWordTextView.setText(currentText + buttonText);
+
+                        //hide the button when the user click it
+                        button.setVisibility(View.INVISIBLE);
+
+                        //re-enable the delete button
+                        ImageButton deleteButton = findViewById(R.id.imageButtondel);
+                        deleteButton.setEnabled(true);
                     }
                 });
             }
+        }
+    }
+
+    private String getRandomUnshownWord() {
+        List<String> unshownWords = new ArrayList<>();
+        for (String word : words) {
+            if (!shownWords.contains(word)) {
+                unshownWords.add(word);
+            }
+        }
+        if (unshownWords.isEmpty()) {
+            // If all words have been shown, reset the list and start again
+            shownWords = new ArrayList<>();
+            return getRandomUnshownWord();
+        } else {
+            Random random = new Random();
+            return unshownWords.get(random.nextInt(unshownWords.size()));
         }
     }
 
@@ -199,8 +271,45 @@ public class MainGame extends AppCompatActivity {
         String currentText = jumbledWordTextView.getText().toString();
         if (!currentText.isEmpty()) {
             // Remove the last character from the current text
+            String deletedLetter = currentText.substring(currentText.length() - 1);
             currentText = currentText.substring(0, currentText.length() - 1);
             jumbledWordTextView.setText(currentText);
+
+            // Bring back the button for the deleted letter
+            showButtonForLetter(deletedLetter);
+
+            // Disable the delete button if there are no letters left
+            ImageButton deleteButton = findViewById(R.id.imageButtondel);
+            if (currentText.isEmpty()) {
+                deleteButton.setEnabled(false);
+            }
         }
+    }
+
+    private void showButtonForLetter(String letter) {
+        for (Button button : letterButtons) {
+            if (button.getText().toString().equals(letter)) {
+                button.setVisibility(View.VISIBLE);
+                break;
+            }
+        }
+    }
+
+    private void reshuffleGame() {
+        // Reshuffle the jumbled word and update the jumbledWordTextView
+        correctWord = getJumbledWord();
+        jumbledWordTextView.setText("");
+
+        // Reshuffle the letters of the jumbled word to update the buttons
+        String shuffledWord = shuffleWord(correctWord);
+        for (int i = 0; i < letterButtons.length; i++) {
+            char letter = shuffledWord.charAt(i);
+            letterButtons[i].setText(String.valueOf(letter));
+            letterButtons[i].setVisibility(View.VISIBLE);
+        }
+
+        // Reshuffle the hint based on the current jumbled word
+        String hint = wordHintMap.get(getOriginalWord(correctWord));
+        hintTextView.setText(hint);
     }
 }

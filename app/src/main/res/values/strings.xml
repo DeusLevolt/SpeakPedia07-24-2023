@@ -39,5 +39,7 @@
     <string name="let">Let\'s improve and Enhance Your Words</string>
     <string name="SpeakPedia">SPEAKPEDIA</string>
     <string name="hint_its_all_fruits">Hint: Its all fruits!</string>
+    <string name="del">DEL</string>
+    <string name="speak">speak</string>
 
 </resources>

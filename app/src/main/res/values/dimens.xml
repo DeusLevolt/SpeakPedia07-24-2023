@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Other dimensions -->
+    <dimen name="button_fixed_width">55dp</dimen> <!-- Set your desired width in dp -->
+</resources>

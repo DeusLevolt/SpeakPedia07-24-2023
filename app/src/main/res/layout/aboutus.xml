@@ -23,31 +23,31 @@
         android:gravity="center"
         android:background="@drawable/about_us_rounded_edges"/>
 
-    <ScrollView
-        android:layout_width="320dp"
-        android:layout_height="500dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginStart="20dp"
-        android:scrollbars="vertical"
-        android:scrollbarTrackVertical="@color/white"
-        android:scrollbarThumbVertical="@color/black"
-        android:background="@drawable/aboutus">
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <ScrollView
+            android:layout_width="320dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="20dp"
+            android:scrollbars="vertical"
+            android:scrollbarTrackVertical="@color/white"
+            android:scrollbarThumbVertical="@color/black"
+            android:background="@drawable/aboutus">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:lineSpacingExtra="10dp"
-                android:text="@string/about_speak"
-                android:textAlignment="center"
-                android:textAppearance="@style/about_speak" />
-        </LinearLayout>
+                android:orientation="vertical">
 
-    </ScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="10dp"
+                    android:text="@string/about_speak"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/about_speak" />
+            </LinearLayout>
+
+        </ScrollView>
 
 
 </RelativeLayout>

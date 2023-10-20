@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/backgroundrectangle"
     android:id="@+id/game_finished">
-
     <TextView
         android:id="@+id/good_job"
         android:layout_width="349dp"
@@ -15,17 +14,13 @@
         android:text="@string/good_job"
         android:textAppearance="@style/good_job"
         android:lineSpacingExtra="-4sp"
-        android:gravity="center_horizontal|center_vertical"
-        />
-
+        android:gravity="center_horizontal|center_vertical"/>
     <View
         android:layout_width="317dp"
         android:layout_height="175dp"
         android:background="@drawable/game_finished_crown"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="150dp"
-        />
-    
+        android:layout_marginTop="150dp"/>
     <Button
         android:layout_width="124dp"
         android:layout_height="40dp"

@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     tools:context=".MainGame"
     android:background="@drawable/backgroundrectangle">
-
     <TextView
         android:id="@+id/hintTextView"
         android:layout_width="310dp"
@@ -21,7 +20,6 @@
         android:textSize="20sp"
         android:textAlignment="center"
         android:fontFamily="@font/baloo" />
-
     <TextView
         android:id="@+id/jumbledWordTextView"
         android:layout_width="252dp"
@@ -35,7 +33,6 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:gravity="center"/>
-
     <LinearLayout
         android:id="@+id/buttonContainer"
         android:layout_width="wrap_content"
@@ -44,7 +41,6 @@
         android:layout_gravity="center"
         android:layout_below="@id/submitButton"
         android:orientation="horizontal">
-
         <Button
             android:id="@+id/button1"
             android:layout_width="55dp"
@@ -54,7 +50,6 @@
             android:textColor="@color/black"
             android:backgroundTint="@color/very_light_blue"
             android:textSize="24sp" />
-
         <Button
             android:id="@+id/button2"
             android:layout_width="55dp"
@@ -65,7 +60,6 @@
             android:layout_marginStart="5dp"
             android:backgroundTint="@color/very_light_blue"
             android:textSize="24sp" />
-
         <Button
             android:id="@+id/button3"
             android:layout_width="55dp"
@@ -76,7 +70,6 @@
             android:layout_marginStart="5dp"
             android:backgroundTint="@color/very_light_blue"
             android:textSize="24sp" />
-
         <Button
             android:id="@+id/button4"
             android:layout_width="55dp"
@@ -87,7 +80,6 @@
             android:layout_marginStart="5dp"
             android:backgroundTint="@color/very_light_blue"
             android:textSize="24sp" />
-
         <Button
             android:id="@+id/button5"
             android:layout_width="55dp"
@@ -101,8 +93,6 @@
     </LinearLayout>
 
 
-
-
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
@@ -111,8 +101,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="Enter" />
-    
-
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="60dp"
@@ -127,8 +115,7 @@
         android:layout_marginStart="250dp"
         android:layout_marginTop="360dp"
         android:background="@drawable/game_delete_button"
-        android:contentDescription="@string/del"
-        />
+        android:contentDescription="@string/del"/>
 
     <ImageButton
         android:id="@+id/shuffle_button"

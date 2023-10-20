@@ -494,7 +494,7 @@
             android:layout_marginTop="200dp"
             android:background="@drawable/frame_26">
             <LinearLayout
-                android:layout_width="352dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
@@ -545,7 +545,6 @@
             android:paddingEnd="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"/>
-
         <Button
             android:id="@+id/about_us"
             android:layout_width="match_parent"
@@ -559,14 +558,25 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"/>
 
+        <Button
+            android:id="@+id/translator"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/Yellow"
+            android:text="@string/Translate"
+            android:textAppearance="@style/translate"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
         <ImageButton
             android:id="@+id/exit_button_main"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:layout_marginTop="390dp"
-            android:layout_marginLeft="165dp"
+            android:layout_marginStart="165dp"
             android:background="@drawable/exit"/>
 </LinearLayout>
-    
-
 </androidx.drawerlayout.widget.DrawerLayout>

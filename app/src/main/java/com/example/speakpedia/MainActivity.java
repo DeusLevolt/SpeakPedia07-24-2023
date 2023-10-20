@@ -1,6 +1,7 @@
 package com.example.speakpedia;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,7 +9,9 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -37,6 +40,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import android.media.MediaPlayer;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView displayText;
@@ -46,6 +50,19 @@ public class MainActivity extends AppCompatActivity {
     private static final int SPEECH_REQUEST_CODE = 2;
     private DrawerLayout drawerLayout;
     private MediaPlayer mediaPlayer;
+    private View translatorLayout;
+
+    private void addTranslatorLayout() {
+        // Inflate and add the new layout (translatorLayout)
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        translatorLayout = inflater.inflate(R.layout.translator, null);
+
+        // Find the parent layout where you want to add the new layout
+        ViewGroup parentLayout = findViewById(R.id.drawer_layout); // Replace with your parent layout's ID
+
+        // Add the translatorLayout to the parent layout
+        parentLayout.addView(translatorLayout);
+    }
 
     public MainActivity() {
     }
@@ -54,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_main);
+
         ImageButton burgerButton = findViewById(R.id.burger);
 
 
@@ -68,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton exitButton = findViewById(R.id.exit_button_main);
         Button aboutus = findViewById(R.id.about_us);
         Button game = findViewById(R.id.game_button);
+        Button translator = findViewById(R.id.translator);
         ImageButton imageButtondel = findViewById(R.id.imageButtondel);
         ImageButton imageButtonspeak = findViewById(R.id.imageButtonspeak);
         TextView imageButtonclearall = findViewById(R.id.imageButtonclearall);
@@ -102,10 +121,30 @@ public class MainActivity extends AppCompatActivity {
 
 
         //set onclick listener for each buttons
-        exitButton.setOnClickListener(new View.OnClickListener() {
+
+        translator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showExitConfirmationDialog();
+                // Find the parent view where you want to add the new layout
+                ViewGroup parentLayout = findViewById(R.id.drawer_layout);
+
+                // Check if the translatorLayout is already added
+                final View[] translatorLayout = {null};
+                // If not added, inflate and add the translatorLayout
+                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                translatorLayout[0] = inflater.inflate(R.layout.translator, null);
+                parentLayout.addView(translatorLayout[0]);
+
+                // Find the "Back" button in the translator layout
+                Button backButton = translatorLayout[0].findViewById(R.id.back_button_translator);
+                backButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Remove the translatorLayout and go back
+                        parentLayout.removeView(translatorLayout[0]);
+                        translatorLayout[0] = null;
+                    }
+                });
             }
         });
 
